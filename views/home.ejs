@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %>  </title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="/css/home.css" type="text/css" />
+
+</head>
+<body>
+    I am an ejs render template
+    <h3>Contact List</h3>
+    <ul>
+        <% for(i of contact_list){  %>
+
+            <li>
+                <span>
+                    <%= i.name %>
+                </span>
+                <span>
+                    <%= i.phoneNumber %>
+                </span>
+
+                <a>
+                    <i class="far fa-trash-alt"></i>
+                </a>
+            </li>
+
+            
+        <%}%>
+    </ul>
+
+    <h3>Create a new contact</h3>
+    <form action="/create" method="post">
+
+        <input name="name" type="text"  placeholder="Contact Name"  required  />
+        <input name="phone" type="number" placeholder="Contact Phone"  required  />
+
+        <button type="submit" >Submit</button>
+
+    </form>
+
+    <form action="/update" method="post">
+
+        <input name="name" type="text"  placeholder="Contact Name"  required  />
+        <input name="phone" type="number" placeholder="Contact Phone"  required  />
+        <input name="index" type="number" required />
+
+
+        <button type="submit" >Update</button>
+
+    </form>
+
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

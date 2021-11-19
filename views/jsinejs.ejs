@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h3>Here is the loop</h3>
+    <% for(let i=0; i<10; i++){  %>
+        <li>
+            <%= i %>
+        </li>
+    <%}%>
+
+    <h3>
+        if else statement
+    </h3>
+
+    <%  if(true){ %>
+        <span>I am parsed</span>
+    <% } else { %>
+        <h3> I am parsed as H3 </h3>
+    <%}%>
+    
+    <h3>Student</h3>
+    <% if(profile) { %>
+
+        <li> <%= profile.name %>  </li>
+        <li>  <%= profile.date  %>  </li>
+    
+    <%}%>
+
+    <li>  <%= profile.date  %>  </li>
+
+</body>
+</html>
